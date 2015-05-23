@@ -26,6 +26,8 @@ def email(sender=None, receivers=(), cc=(), bcc=(),
 
 def postman(host, port=587, auth=(None, None),
             force_tls=False, options={}):
+    username = auth[0]
+    password = auth[1]
     return Postman(
         host=host,
         port=port,
